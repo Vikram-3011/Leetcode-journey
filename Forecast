@@ -1,0 +1,44 @@
+@page "/"
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+@inject WeatherDataService WeatherService
+@inject IJSRuntime JSRuntime
+
+
+    <MudText Typo="Typo.h5" Class="pt-8 pb-4 pl-4 pr-4">
+        Top 5 Global Cities Weather :
+    </MudText>
+    @if (isLoading)
+{
+    <MudProgressCircular Indeterminate="true" Class="my-4"  Color="Color.Secondary" />
+}
+else if (WeatherService.GlobalCityWeather.Count > 0)
+{
+    <MudPaper Class="p-4 mx-auto" Elevation="6"  Style="background-color: #f4f6fa; max-width: 800px; border-radius: 12px;">
+        <MudTable Items="WeatherService.GlobalCityWeather" Class="text-center" Bordered="true" >
+            <HeaderContent >
+                <MudTh Style="background-color: #594AE2; color: white;">City</MudTh>
+                <MudTh Style="background-color: #594AE2; color: white;">Country</MudTh>
+                <MudTh Style="background-color: #594AE2; color: white;">Temperature (°C)</MudTh>
+                <MudTh Style="background-color: #594AE2; color: white;">Weather</MudTh>
+            </HeaderContent>
+            <RowTemplate Context="city">
+                <MudTd>@city.CityName</MudTd>
+                <MudTd>@city.Country</MudTd>
+                <MudTd>Min: @city.TempMin:F2 | Max: @city.TempMax:F2</MudTd>
+                <MudTd>@city.Description</MudTd>
+            </RowTemplate>
+        </MudTable>
+    </MudPaper>
+}
+
+
+@code{
+
+ private async Task LoadWeatherData()
+ {
+     isLoading = true;
+     await WeatherService.FetchGlobalCityWeather();
+     isLoading = false;
+ }
+}
