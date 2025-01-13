@@ -23,8 +23,8 @@
         <MudTh></MudTh>
     </HeaderContent>
     <RowTemplate>
-        <MudTd DataLabel="City">@context.City</MudTd>
-        <MudTd DataLabel="Country">@context.Country</MudTd>
+        <MudTd DataLabel="City">@context.City</MudTd> // this is for the city to save
+        <MudTd DataLabel="Country">@context.Country</MudTd> // this is for the country to save
         <MudTd>
             <MudButton Variant="Variant.Outlined" StartIcon="@Icons.Material.Filled.Favorite" Color="Color.Error" OnClick="@(() => RemoveFavourite(context.City))">Remove</MudButton>
         </MudTd>
