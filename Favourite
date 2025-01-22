@@ -54,7 +54,7 @@
     {
         favourites = await databaseController.GetFavouritesByUserIdAsync(userState.User.Id);
         favourites ??= new List<Favourite>(); // Default to an empty list if no favourites
-        StateHasChanged(); // Explicitly notify the UI to refresh
+        StateHasChanged(); 
     }
 
 
