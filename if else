@@ -11,7 +11,7 @@ public class Solution {
         int N = scanner.nextInt();
         if (N % 2 !=0)
         {
-            System.out.println("Weird");
+            System.out.println("Weird");// git hub repository
         }
         else{
              if (N >= 2  && N <= 5){
