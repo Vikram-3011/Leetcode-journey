@@ -8,10 +8,10 @@ st.title("SQL Query Generator")
 st.write("Enter natural language questions to generate and execute SQL queries on your MySQL database.")
 
 # Database configuration inputs
-db_host = st.text_input("Enter database host:", "localhost") // database host
-db_user = st.text_input("Enter database username:", "root") // User Name
-db_password = st.text_input("Enter database password:", type="password") // User Password
-db_name = st.text_input("Enter database name:", "sales") // User database name
+db_host = st.text_input("Enter database host:", "localhost") 
+db_user = st.text_input("Enter database username:", "root") 
+db_password = st.text_input("Enter database password:", type="password") 
+db_name = st.text_input("Enter database name:", "sales") 
 
 # Google Generative AI key configuration
 genai.configure(api_key='AIzaSyC_o_ejuFBIsEgpW2vJ_8uzGYmARbAdaQA')
