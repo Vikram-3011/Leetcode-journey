@@ -12,7 +12,7 @@ public class WeatherAPIService
     private readonly ILogger<WeatherAPIService> _logger;
     private readonly ISnackbar _snackbar;
     //private readonly EmailService _emailService;
-    //private readonly DatabaseController _databaseController; // Access user data
+    //private readonly DatabaseController _databaseController; 
 
     private const string ApiKey = "weather APi";
     private const string BaseUrl = "weather api url";
