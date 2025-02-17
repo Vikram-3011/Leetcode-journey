@@ -25,7 +25,7 @@ else if (WeatherService.GlobalCityWeather.Count > 0)
             <RowTemplate Context="city">
                 <MudTd>@city.CityName</MudTd>
                 <MudTd>@city.Country</MudTd>
-                <MudTd>Min: @city.TempMin:F2 | Max: @city.TempMax:F2</MudTd>
+                <MudTd>Min: @city.TempMin:F2 | Max: @city.TempMax:F2</MudTd> // tempersture showing area 
                 <MudTd>@city.Description</MudTd>
             </RowTemplate>
         </MudTable>
