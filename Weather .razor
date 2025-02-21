@@ -12,8 +12,8 @@
 
 <MudCard Class="rounded-lg w-50 my-4 py-8 mx-auto" Elevation="5">
     <MudContainer MaxWidth="MaxWidth.Small">
-        <MudTextField Class="mt-2" @bind-Value="@cityName" Label="Enter City Name" Variant="Variant.Outlined" Required/>  //required filed 
-        <MudTextField Class="mt-2" @bind-Value="@numDays" Label="Enter  Days (1-5)" Variant="Variant.Outlined" Type="number" /> //required field 
+        <MudTextField Class="mt-2" @bind-Value="@cityName" Label="Enter City Name" Variant="Variant.Outlined" Required/> 
+        <MudTextField Class="mt-2" @bind-Value="@numDays" Label="Enter  Days (1-5)" Variant="Variant.Outlined" Type="number" /> 
         <MudButton Class="mt-2" OnClick="@FetchWeatherData" Variant="Variant.Filled" Color="Color.Primary">Get Weather</MudButton> Fetch the weather
     
     </MudContainer>
