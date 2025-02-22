@@ -23,8 +23,8 @@ else if (WeatherService.GlobalCityWeather.Count > 0)
                 <MudTh Style="background-color: #594AE2; color: white;">Weather</MudTh>
             </HeaderContent>
             <RowTemplate Context="city">
-                <MudTd>@city.CityName</MudTd>
-                <MudTd>@city.Country</MudTd>
+                <MudTd>@city.CityName</MudTd> //city name
+                <MudTd>@city.Country</MudTd> //country name 
                 <MudTd>Min: @city.TempMin:F2 | Max: @city.TempMax:F2</MudTd>  
                 <MudTd>@city.Description</MudTd>
             </RowTemplate>
