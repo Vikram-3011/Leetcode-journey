@@ -2,7 +2,7 @@
 import pymysql
 import google.generativeai as genai
 import streamlit as st
-
+# find data through the AI in the dataset 
 # Streamlit title and description
 st.title("SQL Query Generator")
 st.write("Enter natural language questions to generate and execute SQL queries on your MySQL database.")
