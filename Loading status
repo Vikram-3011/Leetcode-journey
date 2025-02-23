@@ -1,5 +1,5 @@
 //sun with around line rotation animation
-
+// loading status using sun rays 
                 <div class="weather-loader"> // use it within the loading area 
                     <div class="sun-container">
                         <div class="sun"></div>
