@@ -14,7 +14,7 @@
                 </div>
 
 @code{
-// Loading status for the loading 
+
 <style>
     .weather-loader {
         display: flex;
