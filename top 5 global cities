@@ -11,11 +11,11 @@ public class WeatherDataService
 
     private readonly List<(string CityName, string Country)> predefinedCities = new()
     {
-        ("Tokyo", "Japan"),      // defult cities 
-        ("Delhi", "India"),      // defult cities 
-        ("Shanghai", "China"),   // defult cities 
-        ("Dhaka", "Bangladesh"), // defult cities 
-        ("São Paulo", "Brazil")  // defult cities 
+        ("Tokyo", "Japan"),     
+        ("Delhi", "India"),     
+        ("Shanghai", "China"),   
+        ("Dhaka", "Bangladesh"), 
+        ("São Paulo", "Brazil")  
     };
 
     public WeatherDataService(IHttpClientFactory clientFactory)
