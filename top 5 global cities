@@ -11,7 +11,8 @@ public class WeatherDataService
 
     private readonly List<(string CityName, string Country)> predefinedCities = new()
     {
-        ("Tokyo", "Japan"),     dfghjkl;'
+        ("Tokyo", "Japan"),    
+
 
         ("Delhi", "India"),     
         ("Shanghai", "China"),   
