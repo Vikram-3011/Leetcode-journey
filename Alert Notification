@@ -26,28 +26,7 @@ public class WeatherAPIService
         //_emailService = emailService;
         //_databaseController = databaseController;
     }
-    //public async Task CheckWeatherAlertsForAllUsersAsync()
-    //{
-    //    try
-    //    {
-    //        var users = await _databaseController.GetAllUsersWithFavoriteCities();
-
-    //        foreach (var user in users)
-    //        {
-    //            string userEmail = user.Email;
-    //            var favoriteCities = user.FavoriteCities;
-
-    //            foreach (var city in favoriteCities)
-    //            {
-    //                await CheckWeatherAlertsAsync(userEmail, city);
-    //            }
-    //        }
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        _logger.LogError($"Error checking weather alerts: {ex.Message}");
-    //    }
-    //}
+   
     public async Task CheckWeatherAlertsAsync(string city)
     {
         try
