@@ -12,7 +12,7 @@
                     </div>
                     <MudText Color="Color.Primary" Typo="Typo.h6" Class="mt-3">Fetching Favourite Cities...</MudText>
                 </div>
-
+ewrtyuio
 @code{
 
 <style>
