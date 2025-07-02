@@ -1,17 +1,21 @@
 class Solution {
     public int maxArea(int[] height) {
-        int maxarea = 0 ;
+        int maxarea = 0 ; // we find the area bcz its store the water, formula (area = height*width)
         int left =0 ;
         int right =height.length-1;
 
         while (left < right)
         {
-            int h = Math.min(height[left] ,height[right]);
+            int h = Math.min(height[left] ,height[right]); // we take the small value because of two line height like 3 and 8 only 3 to 3 are store teh water not 3 to 8 store the water.  
+
+            // width also same 8-1=7 , so width are fouunded. right should be right side because 1-8 =-8 its lead to minus value, so right to left are correct.
+
             int w = right - left;
             int area = h * w ;
 
-            maxarea = Math.max(maxarea, area);
+            maxarea = Math.max(maxarea, area); //compare the maximum value 
 
+            // move the pointer to check all value in the array 
             if(height[left] < height[right]){
                 left++;
 
