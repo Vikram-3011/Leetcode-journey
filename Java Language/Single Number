@@ -1,0 +1,13 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+        
+        int first = 0 ;
+
+        for(int num :nums){
+            first ^=num ;
+
+        }
+        return first ;
+
+    }
+}
