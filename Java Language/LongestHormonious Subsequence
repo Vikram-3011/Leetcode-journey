@@ -1,0 +1,23 @@
+  class Solution{
+  public int findLHS(int[] nums) {
+        Arrays.sort(nums); // Step 1: Sort the array
+        int left = 0, right = 0, maxLen = 0;
+
+        // Step 2: Move right pointer
+        while (right < nums.length) {
+            // If diff > 1, shrink window
+            while (nums[right] - nums[left] > 1) {
+                left++;
+            }
+
+            // If diff == 1, valid harmonious window
+            if (nums[right] - nums[left] == 1) {
+                maxLen = Math.max(maxLen, right - left + 1);
+            }
+
+            // Move right forward always
+            right++;
+        }
+
+        return maxLen;
+    }}
