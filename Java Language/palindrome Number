@@ -7,20 +7,19 @@ class Solution {
         }
       int first = x ;
       int sum = 0 ;
-        while(x>0){
-        int remainder = x%10 ;
-        sum = sum*10+remainder;
-        x=x/10;
+        while(x>0){ // math based problem like sol useing the math formula
+        int remainder = x%10 ; // using the "%" for get the remainder and why 10 means our sum are 10 based sum like reminder of 121 are 1 
+        sum = sum*10+remainder; // store the vale to this place for the further sum 
+        x=x/10; // here divide the value using the 10 for drop the last digit we already processed like 121/10 are 12.
 
         }
-        if (first == sum){
+        if (first == sum){ // compare the both value if match true else false .
 
             return true;
         }
         return false;
     }
 }
-
 
 
 ==============================Second Method to solve the problem =================================================
