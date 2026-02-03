@@ -1,28 +1,27 @@
 class Solution {
     public int romanToInt(String s) {
-        int ans = 0;
-        int[] roman = new int[128];
+      int ans = 0; 
+      //this sum divided into three main parts  
+      int[] roman = new int[128]; // In this array give the ASCII value for the strings that why 128
 
-        roman['I'] = 1;
-        roman['V'] = 5;
-        roman['X'] = 10;
-        roman['L'] = 50;
-        roman['C'] = 100;
-        roman['D'] = 500;
-        roman['M'] = 1000;
+      roman['I'] =   1; // give the value to get its easily 
+      roman['V'] =   5;
+      roman['X'] =  10;
+      roman['L'] =  50;
+      roman['C'] = 100;
+      roman['D'] = 500;
+      roman['M'] =1000;
 
-        for(int i =0;i+1<s.length();++i){
-            if(roman[s.charAt(i)]<roman[s.charAt(i+1)]){
-                ans -= roman[s.charAt(i)];
-            }else{
-                ans += roman[s.charAt(i)];
-            }
+      for(int i=0; i+1<s.length(); i++){ // In this loop we can't take the last value becasue in this sum use the i+1 method the last value hasn't have the next value so its throw the error so we stop in the before the last value "i+1<s.length()". 
+        if(roman[s.charAt(i)]< roman[s.charAt(i+1)]){  // if the roman "i" is lesser than the "i+1" sub the "i" from the ans. 
+            ans -= roman[s.charAt(i)]; 
         }
-            return ans = ans + roman[s.charAt(s.length() -1)];
+        else{ // add the value to the current ans value 
+            ans+= roman[s.charAt(i)];
 
-    
-    }
+        }
+      }
+        return ans = ans+ roman[s.charAt(s.length()-1)]; // we have to add the last value manually to add that in the ans value.
+      }
+    // three main parts are the roman alagation, loop , add the last value of the manually.
 }
-
-
-
