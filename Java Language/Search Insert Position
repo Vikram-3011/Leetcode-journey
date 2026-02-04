@@ -1,22 +1,43 @@
-
+=====================================Binery search method (Divide the part and search the value )=======================================
 class Solution {
-    public int searchInsert(int[] nums, int target) {
+    public int searchInsert(int[] nums, int target) {  //this method to insert the position of the value are use the binery method , to divide the array inbetween the center if the target are smaller then we foucs on the left side else right side.
         int l = 0;
         int r = nums.length;
 
         while (l<r){
-             int m =  (l+r) /2 ;
+             int m =  (l+r) /2 ; // add the two value "l,r" and divide that should be the center 
 
-             if(nums[m] == target){
+             if(nums[m] == target){  // center are the target value and return it 
                 return m ;
              }
-             if (nums[m] < target){
+             if (nums[m] < target){ //move the value to the right 
                  l = m +1 ;
              }
              else
-             r=m ;
+             r=m ; // its change the value of the r and m so the divided value also change .
         }
         return l;
+    }
+}
+
+
+======================================Check every single element method=========================
+
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        for (int i=0;i<nums.length;i++){
+            if( nums[i] == target){
+                return i;
+            }
+            
+            if(nums[i] > target){
+                return i;
+
+            }
+        }
+        
+    return nums.length; // this are used for if any number are not match then that number belongs to the very last position of the array , that why use this line in the code .
+    
     }
 }
 
