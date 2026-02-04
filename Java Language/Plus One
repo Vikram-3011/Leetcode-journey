@@ -2,18 +2,16 @@ class Solution {
     public int[] plusOne(int[] digits) {
         int n = digits.length; 
 
-        for (int i=n-1; i>=0;i--){
-            if(digits[i]<9){
+        for (int i=n-1; i>=0;i--){  // increment the one number in the given value , we go from the backward 
+            if(digits[i]<9){  // if the number are the lessthan the 9 increment the value and return it , if the given value are the 9 then we cahnge it to 0.
                 digits[i]++ ;
                  return digits ;
             }
             digits[i]=0;
         }
-
+        // all number are 9 then its should be like the countinous zero so may create the new array with one extra value and in the array put value at very first place 1 and remain are zero because the already the remining value are the zero
         int[] newdigits = new int[n +1];
-        newdigits[0] = 1 ;
-        return newdigits ;
+        newdigits[0] = 1 ; // put the first value of array as zero 
+        return newdigits ; // return the value 
     }
 }
-
-
