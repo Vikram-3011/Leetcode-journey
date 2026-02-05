@@ -1,22 +1,21 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int i = m -1;
-        int j = n-1 ;
-        int k = m+n -1;
+       int i=m-1; // these i, j are used for start from the last value of the array, array have many value value but those value may be in 0 so avoid those value hey give hint so we go in backwards on the value.
+       int j=n-1;
+       int k=m+n-1; // the k are place the value correcctly on the which one of the array has long to hold the both array value in the single array 
 
-        while ( i>= 0 && j>= 0){
-            if(nums1[i] > nums2[j]){
-                nums1[k--] = nums1[i--];
-            }else{
-                nums1[k--]= nums2[j--];
+       while(i >=0 && j>=0){
+            if(nums1[i] > nums2[j]){  // nums1 array value are greater then store in the last postion of the array 
+                nums1[k--] = nums1[i--]; // change the position of the value in the array
+
             }
-        }
-          while (j>=0){
-            nums1[k--] = nums2[j--];
+            else{
+                nums1[k--] = nums2[j--]; // store the nums 2 value in the array 
+            }
+       } 
+         while(j>=0){ // this loop only excecute when second array still have the number in array of nums2 , to store all remaining value in the position 
+            nums1[k--] =nums2[j--];
         }
 
-    }
+  }
 }
-
-
-
