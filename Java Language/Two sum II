@@ -1,0 +1,24 @@
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+       int left =0;
+       int right=numbers.length-1;
+
+        while(left<right){
+            int sum = numbers[left] +numbers[right]; //  this is add the value to compare to the target 
+
+            if(sum==target){  // if the target are match return the index value 
+                return new int[] {left+1 ,right+1}; // return the index with starting 1 due to the question
+            }
+            else if(sum<target){ // if sum is small target is big we have to move to right side so increment the left , its already sorted array
+                left++;
+            }else{  // the sum is already bigger than the sum so we have to make the sum to small value to equal to the target
+                right--;
+            }
+
+        }
+
+        return new int[0];  // this dummy line becasue its has conform value in the array 
+
+    }
+}
+
