@@ -1,0 +1,28 @@
+class Solution {
+    public void rotate(int[] nums, int k) {
+        int n=nums.length;
+
+        k%=n;  // this line are used for find the remainder like if k are 5 the rotation after we did are same array so apply this math we did correctly the rotate.
+
+        //also its reduce the number of rotational becasue if k i 10000 its rotate teh array with k time so its make its easy and only the required time are enough.
+
+        reverse(nums,0,n-1); // call the reverse method
+ 
+        reverse(nums,0,k-1);
+        reverse(nums,k,n-1);
+
+       
+
+    }
+     private void reverse(int[] nums,int s, int e){  // value are came from the revverse function calling 
+                while(s<e){  
+                    int temp = nums[s];  // store the startin value 
+                    nums[s] = nums[e];  // store the end value to the staring position 
+                    nums[e] = temp;   // store the stating position to the end of the array 
+                    s++;
+                    e--;
+
+                }
+
+        }
+}
