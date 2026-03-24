@@ -27,19 +27,22 @@ class Solution {
 
 class Solution {
     public boolean isPalindrome(int x) {
-        
-      String str =String.valueOf(x);
+        if (x<0) return false;  // negative number always not pailndrome
+
+      String str =String.valueOf(x); // this line are used for converstion the int to string , we have to use the two pointer for this sum and its not even array so we cann't use the pointer method on single int so we convert into the string (121 --> "1","2","1") after change we use the pointer.
 
       int left =0;
       int right =str.length() -1;
 
-      while(left<right){
-        if(str.charAt(left)!= str.charAt(right)){
-            return false;
+      while(left<right){  // check until its meet the center using the loop
+        if(str.charAt(left)!= str.charAt(right)){  // if not match anyone of the value its become no pailndrome
+         
+            return false;    
         }
+        right--;  // move pointer from the each side
         left++;
-        right--;
 
       } 
       return true;
 }}
+
