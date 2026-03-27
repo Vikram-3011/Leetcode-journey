@@ -2,14 +2,12 @@ import java.util.Arrays;
 
 class Solution {
     public int[] sortedSquares(int[] nums) {
+        int[] sum = new int[nums.length]; // create the new array , which is length of the nums(input)
 
-      int[] sum =new int[nums.length]; 
-
-        for(int i=0;i<nums.length;i++){
-        sum[i] = nums[i] * nums[i];  // move teh left pat 
+        for(int i=0; i<nums.length;i++){
+           sum[i]= nums[i] * nums[i];  // multiple with same number and store it on the array 
         }
-        Arrays.sort(sum);  // sort the arrays 
-         return sum;
-
+     Arrays.sort(sum); // sort the array
+     return sum; 
     }
 }
