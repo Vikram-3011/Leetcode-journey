@@ -1,20 +1,18 @@
 class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
-        Set<Integer> window = new HashSet<>();
+        HashSet<Integer> maadu = new HashSet<>();
 
-         for( int i= 0; i<nums.length;i++)
-        {
-            if(window.contains(nums [i]))
-            {
-               return true;
+        for (int i=0; i<nums.length;i++){
+            if(maadu.contains(nums[i])){
+                return true;
             }
-             window.add(nums[i]);
-            if(window.size() >k)
-            {
-                window.remove(i-k);
-            }          
-           
+
+            maadu.add(nums[i]);
+
+            if(maadu.size() >k){
+                maadu.remove(nums[i -k]);
+            }
         }
-         return false;
+        return false;
     }
 }
