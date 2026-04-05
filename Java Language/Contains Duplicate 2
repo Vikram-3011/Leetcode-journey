@@ -1,22 +1,21 @@
 class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
-        HashSet<Integer> maadu = new HashSet<>();
+        
+        HashSet summa = new HashSet<>(); // creating the hashset to store the unique value only
 
-        for (int i=0; i<nums.length;i++){
-            if(maadu.contains(nums[i])){
+        for (int i=0;i<nums.length;i++){  // for loop to check the all value
+            if(summa.contains(nums[i])){  // check the value are already exist in the set if exiist then return.
+
                 return true;
             }
 
-            maadu.add(nums[i]);
+            summa.add(nums[i]); // add the current value to the set (extent) 
 
-            if(maadu.size() >k){
-                maadu.remove(nums[i -k]);
+            if(summa.size() > k){  // check the size of the set its lessthan k or not if not then shrink it. 
+                summa.remove(nums[i-k]);
             }
+
         }
-        return false;
+        return false; // duplicate are not found then return false .
     }
 }
-
-
-
-
