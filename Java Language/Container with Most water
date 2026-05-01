@@ -27,10 +27,6 @@ class Solution {
 
         return maxarea ;
     }
-
-
-
-
 }
 
 
